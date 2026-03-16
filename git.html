@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Université Lumière Lyon 2</title>
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* noir */
+            color: #fff; /* texte blanc */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 4px #555;
+        }
+
+        p {
+            max-width: 600px;
+            line-height: 1.6;
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        /* Bouton stylé */
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+    </style>
 </head>
 <body>
-    <p>Bonjour</p>
+    <h1>Université Lumière Lyon 2</h1>
+    <p>
+        Fondée en 1973 à Lyon, l'Université Lumière Lyon 2 est reconnue pour son engagement 
+        dans les sciences humaines et sociales. Elle forme chaque année des milliers 
+        d'étudiants passionnés, en promouvant la recherche, la culture et l’ouverture 
+        internationale. Lyon 2 est une université moderne, attachée à l’innovation 
+        pédagogique et à l’épanouissement personnel de ses étudiants.
+    </p>
+    <button onclick="alert('Bienvenue à l’Université Lumière Lyon 2 !')">Cliquez ici</button>
 </body>
 </html>
