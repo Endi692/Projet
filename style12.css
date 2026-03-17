@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 body{
     font-family: Arial, sans-serif;
     margin:0;
@@ -87,8 +87,7 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:50px;
-=======
-/* Style global */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -96,7 +95,6 @@ body {
     color: white;
 }
 
-/* Menu de navigation */
 nav {
     background: #111;
     padding: 15px;
@@ -126,7 +124,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Section d'accueil (Hero) */
+
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -144,7 +142,7 @@ nav a:hover {
     color: #ddd;
 }
 
-/* Boutons interactifs */
+
 button {
     margin-top: 30px;
     padding: 15px 30px;
@@ -162,7 +160,7 @@ button:hover {
     border: 2px solid white;
 }
 
-/* Sections de contenu */
+
 .section {
     padding: 60px 20px;
     text-align: center;
@@ -173,7 +171,6 @@ button:hover {
     margin-bottom: 30px;
 }
 
-/* Système de cartes (Recherche, International, etc.) */
 .cards {
     display: flex;
     justify-content: center;
@@ -186,24 +183,24 @@ button:hover {
     background: #111;
     padding: 25px;
     width: 250px;
-    border-radius: 8px; /* Un petit arrondi pour faire plus moderne */
+    border-radius: 8px; 
     transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Petit effet de survol */
+    transform: translateY(-10px); 
 }
 
 .card h3 {
     margin-top: 0;
 }
 
-/* Pied de page */
+
 footer {
     background: #111;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
     border-top: 1px solid #333;
->>>>>>> Stashed changes
+
 }

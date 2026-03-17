@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Université Lumière Lyon 2</title>
+<link rel="stylesheet" href="style12.css">
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#">Accueil</a></li>
+<li><a href="#">Université</a></li>
+<li><a href="#">Formations</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<h1>Université Lumière Lyon 2</h1>
+
+<p>
+Clique sur un bouton pour découvrir les points forts de l'université.
+</p>
+
+<p>
+Située à Lyon, l'Université Lumière Lyon 2 est un établissement reconnu dans
+le domaine des sciences humaines et sociales. Elle accueille chaque année
+de nombreux étudiants et propose des formations variées adaptées aux besoins
+actuels.  
+
+L'université met l'accent sur la réussite des étudiants, l'ouverture à
+l'international et le développement de projets innovants. Étudier à Lyon 2,
+c'est évoluer dans un environnement dynamique, avec une vraie vie étudiante
+et de nombreuses opportunités.
+</p>
+
+<button onclick="afficherTexte(1)">Recherche</button>
+<button onclick="afficherTexte(2)">International</button>
+<button onclick="afficherTexte(3)">Vie étudiante</button>
+
+
+<p id="texte" style="margin-top:30px;"></p>
+
+</section>
+
+<footer>
+<p>© 2026 Université Lumière Lyon 2 - Projet étudiant</p>
+</footer>
+
+<script>
+function afficherTexte(numero){
+    let texte = document.getElementById("texte");
+
+    if(numero === 1){
+        texte.innerText = "Des équipes de recherche actives dans plusieurs domaines des sciences humaines.";
+    }
+    else if(numero === 2){
+        texte.innerText = "Des échanges avec des universités étrangères pour enrichir son parcours.";
+    }
+    else if(numero === 3){
+        texte.innerText = "De nombreuses associations et activités pour s'impliquer dans la vie du campus.";
+    }
+}
+</script>
+
+</body>
+</html>
