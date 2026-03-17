@@ -1,40 +1,37 @@
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:black;
-    color:white;
+/* --- Ajouts pour rendre le site plus dynamique --- */
+
+.hero h1 {
+    animation: fadeInDown 1.2s ease-out;
 }
 
-nav{
-    background:#111;
-    padding:15px;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin:0;
-    padding:0;
+/* 2. Effet de survol sur les cartes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333; 
+    border-radius: 8px;    
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); 
+    border-color: white; 
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-
-.hero{
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero h1{
+/* 3. Style pour le bouton (transition plus douce) */
+button {
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}.hero h1{
     font-size:3em;
     margin-bottom:20px;
 }
