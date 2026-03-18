@@ -4,7 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Université Lumière Lyon 2</title>
-<link rel="stylesheet" href="style12.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    background: #1e3a8a;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+button {
+    margin: 15px 10px;
+    padding: 12px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+}
+
+/* TEXTE DYNAMIQUE */
+#texte {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
 </head>
 
 <body>
@@ -22,28 +116,20 @@
 
 <h1>Université Lumière Lyon 2</h1>
 
-<p>
-Clique sur un bouton pour découvrir les points forts de l'université.
-</p>
+<p>Clique sur un bouton pour découvrir les points forts de l'université.</p>
 
 <p>
 Située à Lyon, l'Université Lumière Lyon 2 est un établissement reconnu dans
-le domaine des sciences humaines et sociales. Elle accueille chaque année
-de nombreux étudiants et propose des formations variées adaptées aux besoins
-actuels.  
-
-L'université met l'accent sur la réussite des étudiants, l'ouverture à
-l'international et le développement de projets innovants. Étudier à Lyon 2,
-c'est évoluer dans un environnement dynamique, avec une vraie vie étudiante
-et de nombreuses opportunités.
+le domaine des sciences humaines et sociales.
 </p>
 
+<div>
 <button onclick="afficherTexte(1)">Recherche</button>
 <button onclick="afficherTexte(2)">International</button>
 <button onclick="afficherTexte(3)">Vie étudiante</button>
+</div>
 
-
-<p id="texte" style="margin-top:30px;"></p>
+<p id="texte"></p>
 
 </section>
 
@@ -56,13 +142,13 @@ function afficherTexte(numero){
     let texte = document.getElementById("texte");
 
     if(numero === 1){
-        texte.innerText = "Des équipes de recherche actives dans plusieurs domaines des sciences humaines.";
+        texte.innerText = "Des équipes de recherche actives dans plusieurs domaines.";
     }
     else if(numero === 2){
-        texte.innerText = "Des échanges avec des universités étrangères pour enrichir son parcours.";
+        texte.innerText = "Des échanges avec des universités étrangères.";
     }
     else if(numero === 3){
-        texte.innerText = "De nombreuses associations et activités pour s'impliquer dans la vie du campus.";
+        texte.innerText = "Une vie étudiante riche et dynamique.";
     }
 }
 </script>
