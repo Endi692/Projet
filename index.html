@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université Lumière Lyon 2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f5f7fa, #e4ecf5);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #8b0000;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd6d6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #8b0000;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #8b0000;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #b30000;
+            transform: scale(1.05);
+        }
+
+        #texte {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #8b0000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            min-height: 30px;
+        }
+
+        #texte.show {
+            opacity: 1;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 50px auto;
+            max-width: 1100px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #8b0000;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #8b0000;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Université</a></li>
+            <li><a href="#">Formations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Université Lumière Lyon 2</h1>
+
+        <p>
+            Clique sur un bouton pour découvrir les points forts de l'université.
+        </p>
+
+        <p>
+            Située à Lyon, l'Université Lumière Lyon 2 est un établissement reconnu
+            dans le domaine des sciences humaines et sociales. Elle accueille chaque
+            année de nombreux étudiants et propose des formations variées adaptées
+            aux besoins actuels.
+        </p>
+
+        <p>
+            L'université met l'accent sur la réussite des étudiants, l'ouverture à
+            l'international et le développement de projets innovants. Étudier à Lyon 2,
+            c'est évoluer dans un environnement dynamique, avec une vraie vie étudiante
+            et de nombreuses opportunités.
+        </p>
+
+        <div class="buttons">
+            <button onclick="afficherTexte(1)">Recherche</button>
+            <button onclick="afficherTexte(2)">International</button>
+            <button onclick="afficherTexte(3)">Vie étudiante</button>
+        </div>
+
+        <p id="texte"></p>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h3>Formations variées</h3>
+            <p>
+                L'université propose des licences, masters et parcours spécialisés
+                dans plusieurs domaines des sciences humaines et sociales.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Ouverture internationale</h3>
+            <p>
+                Les étudiants peuvent participer à des échanges universitaires
+                et enrichir leur parcours à l'étranger.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Vie de campus</h3>
+            <p>
+                Associations, événements, projets étudiants et activités culturelles
+                rendent la vie universitaire dynamique et attractive.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Université Lumière Lyon 2 - Projet étudiant</p>
+    </footer>
+
+    <script>
+        function afficherTexte(numero) {
+            let texte = document.getElementById("texte");
+
+            texte.classList.remove("show");
+
+            if (numero === 1) {
+                texte.innerText = "Des équipes de recherche actives dans plusieurs domaines des sciences humaines.";
+            } 
+            else if (numero === 2) {
+                texte.innerText = "Des échanges avec des universités étrangères pour enrichir son parcours.";
+            } 
+            else if (numero === 3) {
+                texte.innerText = "De nombreuses associations et activités pour s'impliquer dans la vie du campus.";
+            }
+
+            setTimeout(() => {
+                texte.classList.add("show");
+            }, 100);
+        }
+    </script>
+=======
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Université Lumière Lyon 2 - Accueil</title>
+<link rel="stylesheet" href="style12.css">
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#">Accueil</a></li>
+<li><a href="#">Université</a></li>
+<li><a href="#">Formations</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<h1>Université Lumière Lyon 2</h1>
+
+<p>
+Fondée en 1973 à Lyon, l'Université Lumière Lyon 2 est reconnue pour son
+engagement dans les sciences humaines et sociales. Elle forme chaque année
+des milliers d'étudiants en favorisant la recherche, la culture et
+l'ouverture internationale.
+</p>
+
+<button onclick="message()">Découvrir l'université</button>
+
+</section>
+
+<section class="section">
+
+<h2>Pourquoi choisir Lyon 2 ?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Recherche</h3>
+<p>Une université active dans les domaines des sciences humaines et sociales.</p>
+</div>
+
+<div class="card">
+<h3>International</h3>
+<p>De nombreux programmes d'échanges avec des universités dans le monde.</p>
+</div>
+
+<div class="card">
+<h3>Vie étudiante</h3>
+<p>Associations, culture et événements pour enrichir la vie universitaire.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Université Lumière Lyon 2 - Projet étudiant</p>
+</footer>
+
+<script>
+function message(){
+    alert("Bienvenue à l'Université Lumière Lyon 2 !");
+}
+</script>
+>>>>>>> 3ff27b075f04ae4108d8c584cc96b0658384b032
+
+</body>
+</html>
