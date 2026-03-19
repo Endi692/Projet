@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offre de Formation | Université Lumière Lyon 2</title>
+    
+    <!-- Importation des icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --lyon2-red: #980616;
+            --lyon2-dark: #333333;
+            --lyon2-light-gray: #f4f4f4;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--lyon2-light-gray);
+            color: var(--lyon2-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            height: 4px;
+            background-color: var(--lyon2-red);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--lyon2-dark);
+        }
+
+        .logo strong {
+            font-weight: 800;
+        }
+
+        .red-text {
+            color: var(--lyon2-red);
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--lyon2-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--lyon2-red);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--lyon2-red);
+            color: var(--white);
+            padding: 80px 0 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* --- GRID LAYOUT --- */
+        .main-content {
+            margin-top: -60px;
+            padding-bottom: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- CARDS --- */
+        .card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 2px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 5px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-top: 5px solid var(--lyon2-red);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--lyon2-red);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.25rem;
+            color: var(--lyon2-red);
+            min-height: 3em;
+            display: flex;
+            align-items: center;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .card ul li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .btn-more {
+            display: inline-block;
+            color: var(--lyon2-dark);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-more:after {
+            content: ' →';
+            transition: 0.2s;
+        }
+
+        .btn-more:hover {
+            color: var(--lyon2-red);
+        }
+
+        /* --- INFO BANNER --- */
+        .info-banner {
+            background: #fff;
+            border-left: 6px solid var(--lyon2-red);
+            padding: 25px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .info-banner i {
+            font-size: 1.8rem;
+            color: var(--lyon2-red);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--lyon2-dark);
+            color: #ccc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.85rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px 0;
+            }
+            .hero h1 { font-size: 2rem; }
+            .nav-links { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar"></div>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    UNIVERSITÉ <strong>LUMIÈRE</strong> <span class="red-text">LYON 2</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">L'Université</a></li>
+                    <li><a href="#" class="active">Formation</a></li>
+                    <li><a href="#">Recherche</a></li>
+                    <li><a href="#">Vie de campus</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Offre de formation</h1>
+            <p>Découvrez nos filières d'excellence en Sciences Humaines et Sociales.</p>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <div class="grid-container">
+            
+            <!-- Arts, Lettres, Langues -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-palette"></i></div>
+                <h3>Arts, Lettres, Langues (ALL)</h3>
+                <ul>
+                    <li>Arts plastiques & Musique</li>
+                    <li>Lettres Classiques & Modernes</li>
+                    <li>Langues Étrangères (LLCER, LEA)</li>
+                    <li>Sciences du Langage</li>
+                </ul>
+                <a href="#" class="btn-more">Consulter le catalogue</a>
+            </div>
+
+            <!-- Droit, Économie, Gestion -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Droit, Économie, Gestion (DEG)</h3>
+                <ul>
+                    <li>Licences de Droit & Science Po</li>
+                    <li>Économie et Gestion</li>
+                    <li>AES (Admin. Éco. et Sociale)</li>
+                    <li>MIASHS</li>
+                </ul>
+                <a href="#" class="btn-more">Consulter le catalogue</a>
+            </div>
+
+            <!-- Sciences Humaines et Sociales -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Sciences Humaines et Sociales (SHS)</h3>
+                <ul>
+                    <li>Psychologie & Cognitive</li>
+                    <li>Sociologie & Anthropologie</li>
+                    <li>Histoire & Histoire de l'Art</li>
+                    <li>Géographie et Aménagement</li>
+                </ul>
+                <a href="#" class="btn-more">Consulter le catalogue</a>
+            </div>
+
+            <!-- Communication & IUT -->
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-comments"></i></div>
+                <h3>Communication & Sociétés</h3>
+                <ul>
+                    <li>Info-Communication</li>
+                    <li>Institut de la Communication</li>
+                    <li>IUT Lumière (Filières Pro)</li>
+                    <li>Mode et Création</li>
+                </ul>
+                <a href="#" class="btn-more">Consulter le catalogue</a>
+            </div>
+
+        </div>
+
+        <div class="info-banner">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+                <strong>Période d'inscription :</strong> Les candidatures se font exclusivement via les plateformes nationales (Parcoursup pour les L1, MonMaster pour les M1).
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Université Lumière Lyon 2</strong></p>
+        <p>86 rue Pasteur, 69007 Lyon | 5 avenue Pierre Mendès France, 69500 Bron</p>
+        <p>&copy; 2026 - Direction des Études et de la Vie Étudiante</p>
+    </footer>
+
+</body>
+</html>
