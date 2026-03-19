@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistiques - Université Lyon 2</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #00e0ff, #00ffa6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* SECTION STATS */
+.stats {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.stat {
+    margin: 100px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s forwards;
+}
+
+.stat:nth-child(2) { animation-delay: 0.3s; }
+.stat:nth-child(3) { animation-delay: 0.6s; }
+.stat:nth-child(4) { animation-delay: 0.9s; }
+.stat:nth-child(5) { animation-delay: 1.2s; }
+
+/* GROS CHIFFRES */
+.stat h2 {
+    font-size: 6rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00e0ff, #00ffa6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.stat p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .stat h2 {
+        font-size: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Université Lyon 2</h1>
+    <p>Des chiffres qui parlent d’eux-mêmes</p>
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>27 000+</h2>
+        <p>Étudiants chaque année</p>
+    </div>
+
+    <div class="stat">
+        <h2>150+</h2>
+        <p>Formations proposées</p>
+    </div>
+
+    <div class="stat">
+        <h2>85%</h2>
+        <p>Taux de réussite</p>
+    </div>
+
+    <div class="stat">
+        <h2>1200+</h2>
+        <p>Enseignants & chercheurs</p>
+    </div>
+
+    <div class="stat">
+        <h2>1973</h2>
+        <p>Année de création</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Université Lumière Lyon 2
+</footer>
+
+</body>
+</html>
